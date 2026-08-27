@@ -4,13 +4,67 @@
   <meta charset="UTF-8" />
   <title>Watchlist Sync</title>
   <style>
-    body { width: 280px; padding: 16px; font-family: system-ui, sans-serif; }
-    h2 { margin: 0 0 12px; font-size: 16px; }
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: system-ui, sans-serif;
+      background: #111827;
+      color: #f3f4f6;
+    }
+    h2 { margin: 0 0 4px; font-size: 16px; }
+    p.sub { margin: 0 0 16px; font-size: 12px; color: #9ca3af; }
+    button.primary {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+    #status { font-size: 12px; color: #9ca3af; margin-bottom: 12px; min-height: 16px; }
+    #tickerList {
+      max-height: 220px;
+      overflow-y: auto;
+      background: #1f2937;
+      border-radius: 6px;
+      padding: 4px;
+      font-size: 13px;
+    }
+    .ticker-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .ticker-row:hover { background: #374151; }
+    .ticker-label { font-weight: 600; }
+    .ticker-actions { display: flex; gap: 6px; }
+    .ticker-actions button {
+      border: none;
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .chart-btn { background: #10b981; color: white; }
+    .remove-btn { background: #374151; color: #f87171; }
   </style>
 </head>
 <body>
   <h2>Watchlist Sync</h2>
-  <p>Hello — the extension is working.</p>
+  <p class="sub">Webull → TradingView, one click.</p>
+
+  <button id="captureBtn" class="primary">Capture from Webull</button>
+
+  <div id="status"></div>
+  <div id="tickerList"></div>
+
   <script src="popup.js"></script>
 </body>
 </html>

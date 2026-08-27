@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Watchlist Sync",
   "version": "0.1.0",
-  "description": "Sync your trading watchlist across platforms with one click.",
+  "description": "Capture your Webull watchlist and export it for one-click import into TradingView.",
   "action": {
     "default_popup": "popup.html"
   },
@@ -11,5 +11,12 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage", "activeTab", "scripting", "downloads"],
+  "host_permissions": ["https://app.webull.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.webull.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
 }
