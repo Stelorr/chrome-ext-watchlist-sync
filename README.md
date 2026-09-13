@@ -42,6 +42,4 @@ TradingView does support importing a `.txt` watchlist file, and this extension o
 
 ## License / Usage
 
-This repository is public for portfolio purposes. The code is not licensed for reuse, redistribution, or commercial use. All rights reserved.
-
-If you're interested in using or licensing this tool, please reach out.
+This repository is public for portfolio and transparency purposes. You're welcome to install and use the published Chrome Web Store extension. The source code itself, however, is not licensed for reuse, modification, or redistribution — all rights reserved. If you're interested in using or licensing this code, please reach out.
